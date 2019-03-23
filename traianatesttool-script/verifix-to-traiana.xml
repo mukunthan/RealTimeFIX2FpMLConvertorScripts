@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<transformations>
+
+	<xsl applyOn="CreditLimitResponse">
+        <template>verifix-to-traiana/CreditLimitResponse.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="LimitCheckApproved">
+        <template>verifix-to-traiana/LimitCheckApproved.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="SuspendCredit">
+        <template>verifix-to-traiana/SuspendCredit.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="RestoreCredit">
+        <template>verifix-to-traiana/RestoreCredit.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="OrderStatusNotification">
+        <template>verifix-to-traiana/OrderStatusNotification.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="ConsentAcknowledgment">
+        <template>verifix-to-traiana/ConsentAcknowledgment.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="ConsentException">
+        <template>verifix-to-traiana/ConsentException.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="ExecutionAcknowledgement">
+        <template>verifix-to-traiana/ExecutionAcknowledgement.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="ExecutionException">
+        <template>verifix-to-traiana/ExecutionException.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="ExecutionNotification">
+        <template>verifix-to-traiana/ExecutionNotification.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="ExecutionRetracted">
+        <template>verifix-to-traiana/ExecutionRetracted.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="LimitCheckRefused">
+        <template>verifix-to-traiana/LimitCheckRefused.xsl</template>
+    </xsl>
+	
+	<xsl applyOn="RequestLimitCheck">
+        <template>verifix-to-traiana/RequestLimitCheck.xsl</template>
+    </xsl>
+
+</transformations>

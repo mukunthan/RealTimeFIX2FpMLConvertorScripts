@@ -1,0 +1,1031 @@
+<fix minor="0" major="5">
+	<header />
+	<trailer />
+	
+	<messages>
+		
+		<message name="CreditLimitResponse" msgtype="FC" msgcat="app">
+		
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpInReplyTo" required="N"  />
+			<field name="FpInReplyToScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpParentCorID" required="N"  />
+			<field name="FpParentCorIDCorSch" required="N"  />
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<field name="FpSeqNum" required="N" />
+			<field name="FpResponse" required="N" />
+			
+			<group name="FpNoOfReasons" required="N">
+				<field name="FpRsnCode" required="N" />
+				<field name="FpRsnDesc" required="N" />	
+				
+			</group>
+			
+		</message>
+		
+		<message name="LimitCheckApproved" msgtype="LA" msgcat="app">
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<field name="FpOnBhlfPtyRefhref" required="N" />
+			<field name="FpCrdRiskFullAproval" required="N" />
+			<field name="FpCrdRiskLmtExpTime" required="N" />
+			<field name="FpOffset" required="N" />
+			
+			<group name="FpNoOfCrdLmtReferences" required="N">
+				<field name="FpCrdLmtRefAppPtyRefhref" required="N" />
+				<field name="FpCrdLmtRefAppID" required="N" />		
+			</group>
+			
+			<field name="FpCrdRiskReqPtyRefhref" required="N" />
+			<field name="FpCrdRiskCrdAppReqType" required="N" />
+			<field name="FpCrdRiskCrdAppModel" required="N" />
+			<group name="FpNoOfCrdLmtTrdIdentifiers" required="N">
+				<field name="FpCrdRiskReqTrdIDPtyRefhref" required="N" />
+				<field name="FpCrdRiskReqTrdID" required="N" />
+			</group>
+			
+			
+			<group name="FpNoOfPartyIDs" required="N">
+				<field name="FpPartyID" required="N" />	
+				<field name="FpPartyIDValue" required="N" />	
+			</group>
+			
+			
+		</message>
+
+		<message name="LimitCheckRefused" msgtype="LR" msgcat="app">
+		      <field name="FpHdMsgID" required="N"  />
+		      <field name="FpHdMsgIDScheme" required="N"  />
+		      <field name="FpHdSentBy" required="N"  />
+		      <field name="FpHdSentTo" required="N"  />
+		      <field name="FpHdCreateTime" required="N"  />
+		      <field name="FpHdExpTime" required="N"  />
+
+		      <field name="FpCorID" required="N" />
+		      <field name="FpCorIDSch" required="N" />
+		      <field name="FpOnBhlfPtyRefhref" required="N" />
+		      <field name="FpCrdRiskLmtRefused" required="N" />
+
+		      <group name="FpNoOfReasons" required="N">
+		        <field name="FpRsnCode" required="N" />
+		        <field name="FpCrdRiskLmtRsnCodeSch" required="N"/> 
+		        <field name="FpRsnDesc" required="N" />
+		      </group>
+
+		      <field name="FpCrdRiskReqPtyRefhref" required="N" />
+		      <field name="FpCrdRiskCrdAppReqType" required="N" />
+
+		      <group name="FpNoOfCrdLmtTrdIdentifiers" required="N">
+		        <field name="FpCrdRiskReqTrdIDPtyRefhref" required="N" />
+		        <field name="FpCrdRiskReqTrdID" required="N" />
+		      </group>
+
+		      <group name="FpNoOfPartyIDs" required="N">
+				<field name="FpPartyID" required="N" />
+		        <field name="FpPartyIDValue" required="N" />
+		      </group>
+			  
+			 
+      
+   		 </message>
+		
+		<message name="SuspendCredit" msgtype="SC" msgcat="app">
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpParentCorID" required="N"  />
+			<field name="FpParentCorIDCorSch" required="N"  />
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<field name="FpSeqNum" required="N" />
+			<field name="FpPartyIDValue" required="N" />
+			<field name="FpPartyID" required="N" />
+			<field name="FpPartyOne" required="N" />
+			<field name="FpPartyOneValue" required="N" />
+			<field name="FpAccountId" required="N" />
+			<field name="FpAccountIdAcc" required="N" />
+		</message>
+		
+		<message name="RestoreCredit" msgtype="RC" msgcat="app">
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpParentCorID" required="N"  />
+			<field name="FpParentCorIDCorSch" required="N"  />
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<field name="FpSeqNum" required="N" />
+			<field name="FpPartyIDValue" required="N" />
+			<field name="FpPartyID" required="N" />
+			<field name="FpPartyOne" required="N" />
+			<field name="FpPartyOneValue" required="N" />
+			<field name="FpAccountId" required="N" />
+			<field name="FpAccountIdAcc" required="N" />
+		</message>
+		
+		<message name="OrderStatusNotification" msgtype="OC" msgcat="app">
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<field name="FpOrdStsReqOrdID" required="N" />
+			<field name="FpOrdID" required="N" />
+			<field name="FpOrdStsStatus" required="N" />
+			<field name="FpOrdStsAppPartyhref" required="N" />
+			<field name="FpOrdStsAppID" required="N" />
+			
+			<group name="FpNoOfPartyIDs" required="N">
+				<field name="FpPartyID" required="N" />		
+				<field name="FpPartyIDValue" required="N" />
+			</group>
+			
+			
+		</message>
+		
+		<message name="ConsentAcknowledgment" msgtype="CA" msgcat="app">
+		
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+		</message>
+		
+		<message name="ConsentException" msgtype="CE" msgcat="app">
+		
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			
+			<group name="FpNoOfReasons" required="N">
+				<field name="FpRsnCode" required="N" />
+				<field name="FpRsnDesc" required="N" />	
+				
+			</group>
+		
+		</message>
+		
+		<message name="ExecutionAcknowledgement" msgtype="EA" msgcat="app">
+		
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			
+			<group name="FpNoOfPtyTradeIdentifiers" required="N">
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdID" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfPtyhref" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdIDSch" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfIssuer" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfIssuerIDSch" required="N" />
+			</group>
+					
+			
+			<group name="FpNoOfPartyIDs" required="N">
+				<field name="FpPartyID" required="N" />
+				<field name="FpPartyIDValue" required="N" />
+			</group>
+			
+			
+		</message>
+		
+		<message name="ExecutionException" msgtype="EE" msgcat="app">
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<group name="FpNoOfReasons" required="N">
+				<field name="FpRsnCode" required="N" />
+				<field name="FpRsnDesc" required="N" />		
+			</group>
+			<field name="FpAddataMimeType" required="N" />
+			<group name="FpNoOfPtyTradeIdentifiers" required="N">
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdID" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfPtyhref" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdIDSch" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfIssuer" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfIssuerIDSch" required="N" />
+			</group>
+			
+		</message>
+		
+		<message name="ExecutionNotification" msgtype="EN" msgcat="app">
+		
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpIsCorrect" required="N"  />
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<field name="FpSeqNum" required="N" />
+
+			<group name="FpNoOfPtyTradeIdentifiers" required="N">
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdID" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdIDSch" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfIssuer" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfIssuerIDSch" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfPtyhref" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfOrgPtyhref" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfOrgTrdID" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfOrgTrdIDSch" required="N" />				
+			</group>
+
+			
+			<field name="FpTrdDate" required="N" />
+
+			<field name="FpSwpProdType" required="N" />
+
+			<group name="FpNoOfSwpStrms" required="N">
+				<field name="FpSwpStrmsID" required="N" />
+				<field name="FpSwpPayPtyhref" required="N" />
+				<field name="FpSwpRcvPtyhref" required="N" />
+				<field name="FpSwpCalcPrdDatesID" required="N" />
+				<field name="FpSwpEffUnAdjDate" required="N" />
+				<field name="FpSwpEffBusDayConv" required="N" />			
+
+				<group name="FpSwpNoOfEffBusCntrs" required="N">
+					<field name="FpSwpEffBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpPayCalPrdRef" required="N" />
+				
+				<field name="FpSwpEndUnAdjDate" required="N" />
+				<field name="FpSwpEndBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfEndBusCntrs" required="N">
+					<field name="FpSwpEndBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdDtAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfCalcPrdDtAdjBusCntrs" required="N">
+					<field name="FpSwpCalcPrdDtAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdFrstRegPrdStartDate" required="N" />
+				<field name="FpSwpCalcPrdLastRegPrdStartDate" required="N" />
+				<field name="FpSwpPrdMult" required="N" />
+				<field name="FpSwpPrd" required="N" />
+				<field name="FpSwpRollConv" required="N" />
+
+				<field name="FpSwpPayFrqMult" required="N" />
+				<field name="FpSwpPayFrqPrd" required="N" />
+				<field name="FpSwpPayFrstPayDate" required="N" />
+				<field name="FpSwpPayLastRegPayDate" required="N" />
+				<field name="FpSwpPayRltTo" required="N" />
+				<field name="FpSwpPayDtOffSetPrdMult" required="N" />
+				<field name="FpSwpPayDtOffSetPrd" required="N" />
+				<field name="FpSwpPayDtOffSetPrdDayType" required="N" />
+				<field name="FpSwpPayDayAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfPayDayAdjBusCntrs" required="N">
+					<field name="FpSwpPayDayAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpRsetDtsID" required="N" />
+				<field name="FpSwpRsetDtsCalcPrdDateRef" required="N" />
+				<field name="FpSwpRsetDtRltTo" required="N" />
+				<field name="FpSwpRsetDtFxDatePrdMult" required="N" />
+				<field name="FpSwpRsetDtFxDatePrd" required="N" />
+				<field name="FpSwpRsetDtFxDateDayType" required="N" />
+				<field name="FpSwpRsetDtFxDateBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfsetDtFxDateBusCntrs" required="N">
+					<field name="FpSwpsetDtFxDateBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpRsetDtFxDateRltTohref" required="N" />
+				<field name="FpSwpRsetDtFrqPrdMult" required="N" />
+				<field name="FpSwpRsetDtFrqPrd" required="N" />
+				<field name="FpSwpRsetDtAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfsetDtAdjBusCntrs" required="N">
+					<field name="FpSwpRsetDtAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdAmtNotSchInitValue" required="N" />
+				<field name="FpSwpCalcPrdAmtNotSchCurrency" required="N" />
+				<field name="FpSwpCalcPrdAmtFltRateIndex" required="N" />
+				<field name="FpSwpCalcPrdAmtInTnrPrdMult" required="N" />
+				<field name="FpSwpCalcPrdAmtInTnrPrd" required="N" />
+				<field name="FpSwpCalcPrdAmtFxdSchInitValue" required="N" />
+				<field name="FpSwpCalcPrdAmtDayCountFraction" required="N" />
+				<field name="FpSwpCalcPrdAmtCompMthd" required="N" />
+
+			</group>
+
+
+			<field name="FpFraPayPtyhref" required="N" />
+			<field name="FpFraRcvPtyhref" required="N" />
+			<field name="FpFraAdjEffDate" required="N" />
+			<field name="FpFraAdjEffDtID" required="N" />
+			<field name="FpFraAdjTrmDate" required="N" />
+			<field name="FpFraUnAdjDate" required="N" />
+			<field name="FpFraPayDayBusDayConv" required="N" />
+
+			<group name="FpFraNoOfBusCntrs" required="N">
+				<field name="FpFraEffBusCntr" required="N" />		
+			</group>
+
+			<field name="FpFraFxDatePrdMult" required="N" />
+			<field name="FpFraFxDatePrd" required="N" />
+			<field name="FpFratDtFxDateDayType" required="N" />
+			<field name="FpFraFxDateBusDayConv" required="N" />
+
+			<group name="FpFraNoOfFxDateBusCntrs" required="N">
+				<field name="FpFraFxDateBusCntr" required="N" />		
+			</group>
+
+			<field name="FpFraFxDateRltTohref" required="N" />
+			<field name="FpFraDayCountFraction" required="N" />
+			<field name="FpFraCalcPrdNoOfDays" required="N" />
+			<field name="FpFraNotCurrency" required="N" />
+			<field name="FpFraNotAmount" required="N" />
+			<field name="FpFraFxdRate" required="N" />
+			<field name="FpFraFltRateIndex" required="N" />
+			<field name="FpFraIdxTenrPrdMult" required="N" />
+			<field name="FpFraIdxTenrPrd" required="N" />
+			<field name="FpFraDiscounting" required="N" />
+
+			<field name="FpFxlProdType" required="N" />
+			<field name="FpFxlExchCur1PayPtyhref" required="N" />
+			<field name="FpFxlExchCur1RcvPtyhref" required="N" />
+			<field name="FpFxlExchCur1PayAmtCurrency" required="N" />
+			<field name="FpFxlExchCur1PayAmtAmount" required="N" />
+			<field name="FpFxlExchCur2PayPtyhref" required="N" />
+			<field name="FpFxlExchCur2RcvPtyhref" required="N" />
+			<field name="FpFxlExchCur2PayAmtCurrency" required="N" />
+			<field name="FpFxlExchCur2PayAmtAmount" required="N" />
+			<field name="FpFxlValDate" required="N" />
+			<field name="FpFxlExchRtCurrency1" required="N" />
+			<field name="FpFxlExchRtCurrency2" required="N" />
+			<field name="FpFxlExchRtQotBasis" required="N" />
+			<field name="FpFxlExchRtRate" required="N" />
+			<field name="FpFxlNonDevStlCurrency" required="N" />
+			<field name="FpFxlNonDevCurrency1" required="N" />
+			<field name="FpFxlNonDevCurrency2" required="N" />
+			<field name="FpFxlNonDevQotBasis" required="N" />
+			<field name="FpFxlNonDevFxDate" required="N" />
+			
+			
+			<group name="FpNoOfPartyIDs" required="N">
+				<field name="FpPartyID" required="N" />	
+				<field name="FpPartyIDValue" required="N" />	
+			</group>
+			
+			
+			
+			
+			<group name="FpSwpNoOfEffBusCntrs" required="N">
+				<field name="FpSwpEffBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfEndBusCntrs" required="N">
+				<field name="FpSwpEndBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfCalcPrdDtAdjBusCntrs" required="N">
+				<field name="FpSwpCalcPrdDtAdjBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfPayDayAdjBusCntrs" required="N">
+				<field name="FpSwpPayDayAdjBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfsetDtFxDateBusCntrs" required="N">
+				<field name="FpSwpsetDtFxDateBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfsetDtAdjBusCntrs" required="N">
+				<field name="FpSwpRsetDtAdjBusCntr" required="N" />		
+			</group>
+			
+		</message>
+
+		<message name="ExecutionRetracted" msgtype="ER" msgcat="app">
+		
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpIsCorrect" required="N"  />
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<field name="FpSeqNum" required="N" />
+
+			<group name="FpNoOfPtyTradeIdentifiers" required="N">
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdID" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdIDSch" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfIssuer" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfIssuerIDSch" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfPtyhref" required="N" />				
+			</group>
+
+			<field name="FpTrdDate" required="N" />
+
+			<field name="FpSwpProdType" required="N" />
+
+			<group name="FpNoOfSwpStrms" required="N">
+				<field name="FpSwpStrmsID" required="N" />
+				<field name="FpSwpPayPtyhref" required="N" />
+				<field name="FpSwpRcvPtyhref" required="N" />
+				<field name="FpSwpCalcPrdDatesID" required="N" />
+				<field name="FpSwpEffUnAdjDate" required="N" />
+				<field name="FpSwpEffBusDayConv" required="N" />			
+
+				<group name="FpSwpNoOfEffBusCntrs" required="N">
+					<field name="FpSwpEffBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpEndUnAdjDate" required="N" />
+				<field name="FpSwpEndBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfEndBusCntrs" required="N">
+					<field name="FpSwpEndBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdDtAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfCalcPrdDtAdjBusCntrs" required="N">
+					<field name="FpSwpCalcPrdDtAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdFrstRegPrdStartDate" required="N" />
+				<field name="FpSwpCalcPrdLastRegPrdStartDate" required="N" />
+				<field name="FpSwpPrdMult" required="N" />
+				<field name="FpSwpPrd" required="N" />
+				<field name="FpSwpRollConv" required="N" />
+				
+				<field name="FpSwpPayCalPrdRef" required="N" />
+
+				<field name="FpSwpPayFrqMult" required="N" />
+				<field name="FpSwpPayFrqPrd" required="N" />
+				<field name="FpSwpPayFrstPayDate" required="N" />
+				<field name="FpSwpPayLastRegPayDate" required="N" />
+				<field name="FpSwpPayRltTo" required="N" />
+				<field name="FpSwpPayDtOffSetPrdMult" required="N" />
+				<field name="FpSwpPayDtOffSetPrd" required="N" />
+				<field name="FpSwpPayDtOffSetPrdDayType" required="N" />
+				<field name="FpSwpPayDayAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfPayDayAdjBusCntrs" required="N">
+					<field name="FpSwpPayDayAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpRsetDtsID" required="N" />
+				<field name="FpSwpRsetDtsCalcPrdDateRef" required="N" />
+				<field name="FpSwpRsetDtRltTo" required="N" />
+				<field name="FpSwpRsetDtFxDatePrdMult" required="N" />
+				<field name="FpSwpRsetDtFxDatePrd" required="N" />
+				<field name="FpSwpRsetDtFxDateDayType" required="N" />
+				<field name="FpSwpRsetDtFxDateBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfsetDtFxDateBusCntrs" required="N">
+					<field name="FpSwpsetDtFxDateBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpRsetDtFxDateRltTohref" required="N" />
+				<field name="FpSwpRsetDtFrqPrdMult" required="N" />
+				<field name="FpSwpRsetDtFrqPrd" required="N" />
+				<field name="FpSwpRsetDtAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfsetDtAdjBusCntrs" required="N">
+					<field name="FpSwpRsetDtAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdAmtNotSchInitValue" required="N" />
+				<field name="FpSwpCalcPrdAmtNotSchCurrency" required="N" />
+				<field name="FpSwpCalcPrdAmtFltRateIndex" required="N" />
+				<field name="FpSwpCalcPrdAmtInTnrPrdMult" required="N" />
+				<field name="FpSwpCalcPrdAmtInTnrPrd" required="N" />
+				<field name="FpSwpCalcPrdAmtFxdSchInitValue" required="N" />
+				<field name="FpSwpCalcPrdAmtDayCountFraction" required="N" />
+				<field name="FpSwpCalcPrdAmtCompMthd" required="N" />
+
+			</group>
+
+
+			<field name="FpFraPayPtyhref" required="N" />
+			<field name="FpFraRcvPtyhref" required="N" />
+			<field name="FpFraAdjEffDate" required="N" />
+			<field name="FpFraAdjEffDtID" required="N" />
+			<field name="FpFraAdjTrmDate" required="N" />
+			<field name="FpFraUnAdjDate" required="N" />
+			<field name="FpFraPayDayBusDayConv" required="N" />
+
+			<group name="FpFraNoOfBusCntrs" required="N">
+				<field name="FpFraEffBusCntr" required="N" />		
+			</group>
+
+			<field name="FpFraFxDatePrdMult" required="N" />
+			<field name="FpFraFxDatePrd" required="N" />
+			<field name="FpFratDtFxDateDayType" required="N" />
+			<field name="FpFraFxDateBusDayConv" required="N" />
+
+			<group name="FpFraNoOfFxDateBusCntrs" required="N">
+				<field name="FpFraFxDateBusCntr" required="N" />		
+			</group>
+
+			<field name="FpFraFxDateRltTohref" required="N" />
+			<field name="FpFraDayCountFraction" required="N" />
+			<field name="FpFraCalcPrdNoOfDays" required="N" />
+			<field name="FpFraNotCurrency" required="N" />
+			<field name="FpFraNotAmount" required="N" />
+			<field name="FpFraFxdRate" required="N" />
+			<field name="FpFraFltRateIndex" required="N" />
+			<field name="FpFraIdxTenrPrdMult" required="N" />
+			<field name="FpFraIdxTenrPrd" required="N" />
+			<field name="FpFraDiscounting" required="N" />
+
+			<field name="FpFxlProdType" required="N" />
+			<field name="FpFxlExchCur1PayPtyhref" required="N" />
+			<field name="FpFxlExchCur1RcvPtyhref" required="N" />
+			<field name="FpFxlExchCur1PayAmtCurrency" required="N" />
+			<field name="FpFxlExchCur1PayAmtAmount" required="N" />
+			<field name="FpFxlExchCur2PayPtyhref" required="N" />
+			<field name="FpFxlExchCur2RcvPtyhref" required="N" />
+			<field name="FpFxlExchCur2PayAmtCurrency" required="N" />
+			<field name="FpFxlExchCur2PayAmtAmount" required="N" />
+			<field name="FpFxlValDate" required="N" />
+			<field name="FpFxlExchRtCurrency1" required="N" />
+			<field name="FpFxlExchRtCurrency2" required="N" />
+			<field name="FpFxlExchRtQotBasis" required="N" />
+			<field name="FpFxlExchRtRate" required="N" />
+			<field name="FpFxlNonDevStlCurrency" required="N" />
+			<field name="FpFxlNonDevCurrency1" required="N" />
+			<field name="FpFxlNonDevCurrency2" required="N" />
+			<field name="FpFxlNonDevQotBasis" required="N" />
+
+			
+			
+			<group name="FpNoOfPartyIDs" required="N">
+				<field name="FpPartyID" required="N" />	
+				<field name="FpPartyIDValue" required="N" />
+			</group>
+			
+			
+			
+			<group name="FpSwpNoOfEffBusCntrs" required="N">
+				<field name="FpSwpEffBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfEndBusCntrs" required="N">
+				<field name="FpSwpEndBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfCalcPrdDtAdjBusCntrs" required="N">
+				<field name="FpSwpCalcPrdDtAdjBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfPayDayAdjBusCntrs" required="N">
+				<field name="FpSwpPayDayAdjBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfsetDtFxDateBusCntrs" required="N">
+				<field name="FpSwpsetDtFxDateBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfsetDtAdjBusCntrs" required="N">
+				<field name="FpSwpRsetDtAdjBusCntr" required="N" />		
+			</group>
+			
+					
+		</message>
+
+		<message name="RequestLimitCheck" msgtype="RL" msgcat="app">
+		
+			<field name="FpHdMsgID" required="N"  />
+			<field name="FpHdMsgIDScheme" required="N"  />
+			<field name="FpHdSentBy" required="N"  />
+			<field name="FpHdSentTo" required="N"  />
+			<field name="FpHdCreateTime" required="N"  />
+			<field name="FpHdExpTime" required="N"  />
+			
+			<field name="FpIsCorrect" required="N"  />
+			<field name="FpCorID" required="N" />
+			<field name="FpCorIDSch" required="N" />
+			<field name="FpReqPartyhref" required="N" />
+			<field name="FpCreAppReqType" required="N" />
+			<field name="FpCreAppModel" required="N" />
+
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdID" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfTrdIDSch" required="N" />
+				<field name="FpTrdTrdHdrPtyTrdIdfPtyhref" required="N" />			
+
+
+			<field name="FpTrdDate" required="N" />
+
+			<field name="FpSwpProdType" required="N" />
+
+
+			<group name="FpNoOfSwpStrms" required="N">
+				<field name="FpSwpStrmsID" required="N" />
+				<field name="FpSwpPayPtyhref" required="N" />
+				<field name="FpSwpRcvPtyhref" required="N" />
+				<field name="FpSwpCalcPrdDatesID" required="N" />
+				<field name="FpSwpEffUnAdjDate" required="N" />
+				<field name="FpSwpEffBusDayConv" required="N" />			
+
+				<group name="FpSwpNoOfEffBusCntrs" required="N">
+					<field name="FpSwpEffBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpEndUnAdjDate" required="N" />
+				<field name="FpSwpEndBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfEndBusCntrs" required="N">
+					<field name="FpSwpEndBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdDtAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfCalcPrdDtAdjBusCntrs" required="N">
+					<field name="FpSwpCalcPrdDtAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdFrstRegPrdStartDate" required="N" />
+				<field name="FpSwpCalcPrdLastRegPrdStartDate" required="N" />
+				<field name="FpSwpPrdMult" required="N" />
+				<field name="FpSwpPrd" required="N" />
+				<field name="FpSwpRollConv" required="N" />
+
+				<field name="FpSwpPayFrqMult" required="N" />
+				<field name="FpSwpPayFrqPrd" required="N" />
+				<field name="FpSwpPayFrstPayDate" required="N" />
+				<field name="FpSwpPayLastRegPayDate" required="N" />
+				<field name="FpSwpPayRltTo" required="N" />
+				<field name="FpSwpPayDtOffSetPrdMult" required="N" />
+				<field name="FpSwpPayDtOffSetPrd" required="N" />
+				<field name="FpSwpPayDtOffSetPrdDayType" required="N" />
+				<field name="FpSwpPayDayAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfPayDayAdjBusCntrs" required="N">
+					<field name="FpSwpPayDayAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpPayCalPrdRef" required="N" />
+				
+				<field name="FpSwpRsetDtsID" required="N" />
+				<field name="FpSwpRsetDtsCalcPrdDateRef" required="N" />
+				<field name="FpSwpRsetDtRltTo" required="N" />
+				<field name="FpSwpRsetDtFxDatePrdMult" required="N" />
+				<field name="FpSwpRsetDtFxDatePrd" required="N" />
+				<field name="FpSwpRsetDtFxDateDayType" required="N" />
+				<field name="FpSwpRsetDtFxDateBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfsetDtFxDateBusCntrs" required="N">
+					<field name="FpSwpsetDtFxDateBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpRsetDtFxDateRltTohref" required="N" />
+				<field name="FpSwpRsetDtFrqPrdMult" required="N" />
+				<field name="FpSwpRsetDtFrqPrd" required="N" />
+				<field name="FpSwpRsetDtAdjBusDayConv" required="N" />
+
+				<group name="FpSwpNoOfsetDtAdjBusCntrs" required="N">
+					<field name="FpSwpRsetDtAdjBusCntr" required="N" />		
+				</group>
+
+				<field name="FpSwpCalcPrdAmtNotSchInitValue" required="N" />
+				<field name="FpSwpCalcPrdAmtNotSchCurrency" required="N" />
+				<field name="FpSwpCalcPrdAmtFltRateIndex" required="N" />
+				<field name="FpSwpCalcPrdAmtInTnrPrdMult" required="N" />
+				<field name="FpSwpCalcPrdAmtInTnrPrd" required="N" />
+				<field name="FpSwpCalcPrdAmtFxdSchInitValue" required="N" />
+				<field name="FpSwpCalcPrdAmtDayCountFraction" required="N" />
+				<field name="FpSwpCalcPrdAmtCompMthd" required="N" />
+
+			</group>
+
+
+			<field name="FpFraPayPtyhref" required="N" />
+			<field name="FpFraRcvPtyhref" required="N" />
+			<field name="FpFraAdjEffDate" required="N" />
+			<field name="FpFraAdjEffDtID" required="N" />
+			<field name="FpFraAdjTrmDate" required="N" />
+			<field name="FpFraUnAdjDate" required="N" />
+			<field name="FpFraPayDayBusDayConv" required="N" />
+
+			<group name="FpFraNoOfBusCntrs" required="N">
+				<field name="FpFraEffBusCntr" required="N" />		
+			</group>
+
+			<field name="FpFraFxDatePrdMult" required="N" />
+			<field name="FpFraFxDatePrd" required="N" />
+			<field name="FpFratDtFxDateDayType" required="N" />
+			<field name="FpFraFxDateBusDayConv" required="N" />
+
+			<group name="FpFraNoOfFxDateBusCntrs" required="N">
+				<field name="FpFraFxDateBusCntr" required="N" />		
+			</group>
+
+			<field name="FpFraFxDateRltTohref" required="N" />
+			<field name="FpFraDayCountFraction" required="N" />
+			<field name="FpFraCalcPrdNoOfDays" required="N" />
+			<field name="FpFraNotCurrency" required="N" />
+			<field name="FpFraNotAmount" required="N" />
+			<field name="FpFraFxdRate" required="N" />
+			<field name="FpFraFltRateIndex" required="N" />
+			<field name="FpFraIdxTenrPrdMult" required="N" />
+			<field name="FpFraIdxTenrPrd" required="N" />
+			<field name="FpFraDiscounting" required="N" />
+			
+
+			<field name="FpFxlProdType" required="N" />
+			<field name="FpFxlExchCur1PayPtyhref" required="N" />
+			<field name="FpFxlExchCur1RcvPtyhref" required="N" />
+			<field name="FpFxlExchCur1PayAmtCurrency" required="N" />
+			<field name="FpFxlExchCur1PayAmtAmount" required="N" />
+			<field name="FpFxlExchCur2PayPtyhref" required="N" />
+			<field name="FpFxlExchCur2RcvPtyhref" required="N" />
+			<field name="FpFxlExchCur2PayAmtCurrency" required="N" />
+			<field name="FpFxlExchCur2PayAmtAmount" required="N" />
+			<field name="FpFxlValDate" required="N" />
+			<field name="FpFxlExchRtCurrency1" required="N" />
+			<field name="FpFxlExchRtCurrency2" required="N" />
+			<field name="FpFxlExchRtQotBasis" required="N" />
+			<field name="FpFxlExchRtRate" required="N" />
+			<field name="FpFxlNonDevStlCurrency" required="N" />
+			<field name="FpFxlNonDevCurrency1" required="N" />
+			<field name="FpFxlNonDevCurrency2" required="N" />
+			<field name="FpFxlNonDevQotBasis" required="N" />
+			<field name="FpFxlNonDevFxDate" required="N" />
+
+			<field name="FpTrdAllcTradeID" required="N" />
+			<field name="FpOrdID" required="N" />
+			
+			<field name="FpTrdAllcRefhref" required="N" />
+			<field name="FpTrdAllcCurrency" required="N" />
+			<field name="FpTrdAllcAmount" required="N" />
+			<field name="FpTrdAllcAppType" required="N" />
+			<field name="FpTrdAllcAppStatus" required="N" />
+
+
+			<field name="FpAccountSurvPartyhref" required="N" />
+			<field name="FpAccountBenhref" required="N" />
+			<field name="FpAccountId" required="N" />
+			
+			<group name="FpNoOfPartyIDs" required="N">
+				<field name="FpPartyID" required="N" />
+				<field name="FpPartyIDValue" required="N" />	
+			</group>
+			
+			
+			
+			<group name="FpSwpNoOfEffBusCntrs" required="N">
+				<field name="FpSwpEffBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfEndBusCntrs" required="N">
+				<field name="FpSwpEndBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfCalcPrdDtAdjBusCntrs" required="N">
+				<field name="FpSwpCalcPrdDtAdjBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfPayDayAdjBusCntrs" required="N">
+				<field name="FpSwpPayDayAdjBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfsetDtFxDateBusCntrs" required="N">
+				<field name="FpSwpsetDtFxDateBusCntr" required="N" />		
+			</group>
+			<group name="FpSwpNoOfsetDtAdjBusCntrs" required="N">
+				<field name="FpSwpRsetDtAdjBusCntr" required="N" />		
+			</group>
+
+
+					
+		</message>
+
+	</messages>
+	
+	<fields>
+		 
+		
+		<field number="35" name="MsgType" type="STRING" />
+		
+		
+		<field number="71001" name="FpHdMsgID" type="String" />
+		<field number="71002" name="FpHdMsgIDScheme" type="String" />
+		<field number="71003" name="FpHdSentBy" type="String" />
+		<field number="71004" name="FpHdSentTo" type="String" />
+		<field number="71005" name="FpHdCreateTime" type="UTCTIMESTAMP" />
+		<field number="71006" name="FpHdExpTime" type="UTCTIMESTAMP" />
+		<field number="71007" name="FpNoOfPartyIDs" type="NUMINGROUP" />
+		<field number="71008" name="FpPartyID" type="String" />
+		<field number="71009" name="FpPartyIDValue" type="String" />
+		<field number="71010" name="FpAccountId" type="String" />
+		<field number="71011" name="FpAccountBenhref" type="String" />
+		<field number="71012" name="FpAccountSurvPartyhref" type="String" />
+		<field number="71013" name="FpSwpProdType" type="String" />
+		<field number="71014" name="FpNoOfSwpStrms" type="NUMINGROUP" />
+		<field number="71015" name="FpSwpStrmsID" type="String" />
+		<field number="71016" name="FpSwpPayPtyhref" type="String" />
+		<field number="71017" name="FpSwpRcvPtyhref" type="String" />
+		<field number="71018" name="FpSwpCalcPrdDatesID" type="String" />
+		<field number="71019" name="FpSwpEffUnAdjDate" type="String" />
+		<field number="71020" name="FpSwpEffBusDayConv" type="String" />
+		<field number="71021" name="FpSwpNoOfEffBusCntrs" type="INT" />
+		<field number="71022" name="FpSwpEffBusCntr" type="String" />
+		<field number="71023" name="FpSwpEndUnAdjDate" type="String" />
+		<field number="71024" name="FpSwpEndBusDayConv" type="String" />
+		<field number="71025" name="FpSwpNoOfEndBusCntrs" type="INT" />
+		<field number="71026" name="FpSwpEndBusCntr" type="String" />
+		<field number="71027" name="FpSwpCalcPrdDtAdjBusDayConv" type="String" />
+		<field number="71028" name="FpSwpNoOfCalcPrdDtAdjBusCntrs" type="INT" />
+		<field number="71029" name="FpSwpCalcPrdDtAdjBusCntr" type="String" />
+		<field number="71030" name="FpSwpCalcPrdFrstRegPrdStartDate" type="String" />
+		<field number="71031" name="FpSwpCalcPrdLastRegPrdStartDate" type="String" />
+		<field number="71032" name="FpSwpPrdMult" type="String" />
+		<field number="71033" name="FpSwpPrd" type="String" />
+		<field number="71034" name="FpSwpRollConv" type="String" />
+		<field number="71035" name="FpSwpPayFrqMult" type="String" />
+		<field number="71036" name="FpSwpPayFrqPrd" type="String" />
+		<field number="71037" name="FpSwpPayFrstPayDate" type="String" />
+		<field number="71038" name="FpSwpPayLastRegPayDate" type="String" />
+		<field number="71039" name="FpSwpPayRltTo" type="String" />
+		<field number="71040" name="FpSwpPayDtOffSetPrdMult" type="String" />
+		<field number="71041" name="FpSwpPayDtOffSetPrd" type="String" />
+		<field number="71042" name="FpSwpPayDtOffSetPrdDayType" type="String" />
+		<field number="71043" name="FpSwpPayDayAdjBusDayConv" type="String" />
+		<field number="71044" name="FpSwpNoOfPayDayAdjBusCntrs" type="INT" />
+		<field number="71045" name="FpSwpPayDayAdjBusCntr" type="String" />
+		<!-- *************************************************************** -->
+		
+		<field number="71166" name="FpSwpPayCalPrdRef" type="String" />
+		
+		
+		<field number="71046" name="FpSwpRsetDtsID" type="String" />
+		<field number="71047" name="FpSwpRsetDtsCalcPrdDateRef" type="String" />
+		<field number="71048" name="FpSwpRsetDtRltTo" type="String" />
+		<field number="71049" name="FpSwpRsetDtFxDatePrdMult" type="String" />
+		<field number="71050" name="FpSwpRsetDtFxDatePrd" type="String" />
+		<field number="71051" name="FpAccountIdAcc" type="String" />
+		<field number="71052" name="FpSwpRsetDtFxDateBusDayConv" type="String" />
+		<field number="71053" name="FpSwpNoOfsetDtFxDateBusCntrs" type="INT" />
+		<field number="71054" name="FpSwpsetDtFxDateBusCntr" type="String" />
+		<field number="71055" name="FpSwpRsetDtFxDateRltTohref" type="String" />
+		<field number="71056" name="FpSwpRsetDtFrqPrdMult" type="String" />
+		<field number="71057" name="FpSwpRsetDtFrqPrd" type="String" />
+		<field number="71058" name="FpSwpRsetDtAdjBusDayConv" type="String" />
+		<field number="71059" name="FpSwpNoOfsetDtAdjBusCntrs" type="INT" />
+		<field number="71060" name="FpSwpRsetDtAdjBusCntr" type="String" />
+		<field number="71061" name="FpSwpCalcPrdAmtNotSchInitValue" type="String" />
+		<field number="71062" name="FpSwpCalcPrdAmtNotSchCurrency" type="String" />
+		<field number="71063" name="FpSwpCalcPrdAmtFltRateIndex" type="String" />
+		<field number="71064" name="FpSwpCalcPrdAmtInTnrPrdMult" type="String" />
+		<field number="71065" name="FpSwpCalcPrdAmtInTnrPrd" type="String" />
+		<field number="71066" name="FpSwpCalcPrdAmtFxdSchInitValue" type="String" />
+		<field number="71067" name="FpSwpCalcPrdAmtDayCountFraction" type="String" />
+		<field number="71068" name="FpSwpCalcPrdAmtCompMthd" type="String" />
+		<field number="71069" name="FpFxlProdType" type="String" />
+		<field number="71070" name="FpFxlExchCur1PayPtyhref" type="String" />
+		<field number="71071" name="FpFxlExchCur1RcvPtyhref" type="String" />
+		<field number="71072" name="FpFxlExchCur1PayAmtCurrency" type="String" />
+		<field number="71073" name="FpFxlExchCur1PayAmtAmount" type="String" />
+		<field number="71074" name="FpFxlExchCur2PayPtyhref" type="String" />
+		<field number="71075" name="FpFxlExchCur2RcvPtyhref" type="String" />
+		<field number="71076" name="FpFxlExchCur2PayAmtCurrency" type="String" />
+		<field number="71077" name="FpFxlExchCur2PayAmtAmount" type="String" />
+		<field number="71078" name="FpFxlValDate" type="String" />
+		<field number="71079" name="FpFxlExchRtCurrency1" type="String" />
+		<field number="71080" name="FpFxlExchRtCurrency2" type="String" />
+		<field number="71081" name="FpFxlExchRtQotBasis" type="String" />
+		<field number="71082" name="FpFxlExchRtRate" type="String" />
+		<field number="71083" name="FpFxlNonDevStlCurrency" type="String" />
+		<field number="71084" name="FpFxlNonDevCurrency1" type="String" />
+		<field number="71085" name="FpFxlNonDevCurrency2" type="String" />
+		<field number="71086" name="FpFxlNonDevQotBasis" type="String" />
+		<field number="71087" name="FpFraPayPtyhref" type="String" />
+		<field number="71088" name="FpFraRcvPtyhref" type="String" />
+		<field number="71089" name="FpFraAdjEffDate" type="String" />
+		<field number="71090" name="FpFraAdjEffDtID" type="String" />
+		<field number="71091" name="FpFraAdjTrmDate" type="String" />
+		<field number="71092" name="FpFraUnAdjDate" type="String" />
+		<field number="71093" name="FpFraPayDayBusDayConv" type="String" />
+		<field number="71094" name="FpFraNoOfBusCntrs" type="INT" />
+		<field number="71095" name="FpFraEffBusCntr" type="String" />
+		<field number="71096" name="FpFraFxDatePrdMult" type="String" />
+		<field number="71097" name="FpFraFxDatePrd" type="String" />
+		<field number="71098" name="FpFratDtFxDateDayType" type="String" />
+		<field number="71099" name="FpFraFxDateBusDayConv" type="String" />
+		<field number="71100" name="FpFraNoOfFxDateBusCntrs" type="INT" />
+		<field number="71101" name="FpFraFxDateBusCntr" type="String" />
+		<field number="71102" name="FpFraFxDateRltTohref" type="String" />
+		<field number="71103" name="FpFraDayCountFraction" type="String" />
+		<field number="71104" name="FpFraCalcPrdNoOfDays" type="String" />
+		<field number="71105" name="FpFraNotCurrency" type="String" />
+		<field number="71106" name="FpFraNotAmount" type="String" />
+		<field number="71107" name="FpFraFxdRate" type="String" />
+		<field number="71108" name="FpFraFltRateIndex" type="String" />
+		<field number="71109" name="FpFraIdxTenrPrdMult" type="String" />
+		<field number="71110" name="FpFraIdxTenrPrd" type="String" />
+		<field number="71111" name="FpFraDiscounting" type="String" />
+		<field number="71112" name="FpParentCorID" type="String" />
+		<field number="71113" name="FpParentCorIDCorSch" type="String" />
+		<field number="71114" name="FpCorID" type="String" />
+		<field number="71115" name="FpCorIDSch" type="String" />
+		<field number="71116" name="FpSeqNum" type="String" />
+		<field number="71117" name="FpResponse" type="String" />
+		<field number="71118" name="FpRsnCode" type="String" />
+		<field number="71119" name="FpRsnDesc" type="String" />
+		<field number="71150" name="FpIsCorrect" type="String" />
+		<field number="71121" name="FpTrdTrdHdrPtyTrdIdfPtyhref" type="String" />
+		<field number="71122" name="FpTrdTrdHdrPtyTrdIdfTrdID" type="String" />
+
+		<field number="71124" name="FpTrdAllcTradeID" type="String" />
+		<field number="71125" name="FpTrdAllcRefhref" type="String" />
+		<field number="71126" name="FpTrdAllcCurrency" type="String" />
+		<field number="71127" name="FpTrdAllcAmount" type="String" />
+		<field number="71128" name="FpTrdAllcAppType" type="String" />
+		<field number="71129" name="FpTrdAllcAppStatus" type="String" />
+		<field number="71130" name="FpTrdTrdHdrPtyTrdIdfTrdIDSch" type="String" />
+		<field number="71131" name="FpNoOfPtyTradeIdentifiers" type="INT" />
+		<field number="71132" name="FpTrdTrdHdrPtyTrdIdfOrgPtyhref" type="String" />
+		<field number="71133" name="FpTrdTrdHdrPtyTrdIdfOrgTrdID" type="String" />
+		<field number="71134" name="FpTrdTrdHdrPtyTrdIdfOrgTrdIDSch" type="String" />
+		<field number="71135" name="FpPtyTrdInfoPtyRefhref" type="String" />
+		<field number="71136" name="FpTrdDate" type="String" />
+		<field number="71137" name="FpOnBhlfPtyRefhref" type="String" />
+		<field number="71138" name="FpCrdRiskFullAproval" type="String" />
+		<field number="71139" name="FpCrdRiskLmtExpTime" type="String" />
+		<field number="71140" name="FpNoOfCrdLmtReferences" type="INT" />
+		<field number="71141" name="FpCrdLmtRefAppPtyRefhref" type="String" />
+		<field number="71142" name="FpCrdRiskReqPtyRefhref" type="String" />
+		<field number="71143" name="FpCrdRiskCrdAppReqType" type="String" />
+		<field number="71144" name="FpCrdRiskReqTrdIDPtyRefhref" type="String" />
+		<field number="71145" name="FpCrdRiskReqTrdID" type="String" />
+		<field number="71146" name="FpCrdLmtRefAppID" type="String" />	
+		<field number="71147" name="FpCrdRiskCrdAppModel" type="String" />
+
+
+
+		<field number="71151" name="FpNoOfReasons" type="INT" />
+		<field number="71152" name="FpReqPartyhref" type="String" />
+		<field number="71153" name="FpCreAppReqType" type="String" />
+		<field number="71154" name="FpCreAppModel" type="String" />
+		<field number="71155" name="FpTrdTrdHdrPtyTrdIdfIssuer" type="String" />
+		<field number="71156" name="FpTrdTrdHdrPtyTrdIdfIssuerIDSch" type="String" />
+		<field number="71157" name="FpOrdStsReqOrdID" type="String" />
+		<field number="71158" name="FpOrdStsStatus" type="String" />
+		<field number="71159" name="FpOrdStsAppPartyhref" type="String" />
+		<field number="71160" name="FpOrdStsAppID" type="String" />
+		<field number="71161" name="FpNoOfCrdLmtTrdIdentifiers" type="INT" />
+		<field number="71162" name="FpCrdRiskLmtRefused" type="String" />
+	    <field number="71163" name="FpAddataMimeType" type="String" />
+	    <field number="71164" name="FpCrdRiskLmtRsnCodeSch" type="String" />
+		<field number="71165" name="FpSwpRsetDtFxDateDayType" type="String" />	
+		<field number="71167" name="FpOrdID" type="String" />
+		<field number ="71168" name="FpOffset" type="String" />
+		<field number ="71169" name="FpPartyOne" type="String" />
+		<field number ="71170" name="FpPartyOneValue" type="String" />
+		<field number ="71171" name="FpFxlNonDevFxDate" type="String" />
+		<field number ="71172" name="FpInReplyTo" type="String" />
+		<field number ="71173" name="FpInReplyToScheme" type="String" />
+		
+
+		
+	</fields>
+</fix>

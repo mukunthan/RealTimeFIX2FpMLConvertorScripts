@@ -1,0 +1,42 @@
+<fix type="FIXT" major="1" minor="1">
+	<header>
+		<field name="BeginString" required="Y" />
+		<field name="BodyLength" required="Y" />
+		<field name="MsgType" required="Y" />
+		<field name="SenderCompID" required="Y" />
+		<field name="TargetCompID" required="Y" />
+		<field name="MsgSeqNum" required="Y" />
+		<field name="SendingTime" required="N" />
+		<field name="OrigSendingTime" required="N" />
+		<field name="ApplVerID" required="N" />
+		<field name="PossResend" required="N" />
+		<field name="PossDupFlag" required="N" />
+		<field name="XmlContent" required="N" />
+	</header>
+	<trailer>
+		<field name="CheckSum" required="Y" />
+	</trailer>
+	<messages>
+		
+
+		
+	</messages>
+	<components />
+	<fields>
+		<field name="XmlContent" number="213" type="STRING" />
+		<field name="BeginString" number="8" type="STRING" />
+		<field name="BodyLength" number="9" type="LENGTH" />
+		<field name="CheckSum" number="10" type="STRING" />
+		<field name="MsgSeqNum" number="34" type="SEQNUM" />
+		<field number="35" name="MsgType" type="STRING" />
+		<field name="SenderCompID" number="49" type="STRING" />
+		<field name="SendingTime" number="52" type="UTCTIMESTAMP" />
+		<field name="TargetCompID" number="56" type="STRING" />
+		<field name="OrigSendingTime" number="122" type="UTCTIMESTAMP" />
+		<field name="ApplVerID" number="1128" type="STRING" />
+		<field name="PossResend" number="97" type="BOOLEAN" />
+		<field name="PossDupFlag" number="43" type="BOOLEAN" />
+		
+		
+	</fields>
+</fix>
